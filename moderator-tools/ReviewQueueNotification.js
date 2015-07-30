@@ -1,7 +1,8 @@
+/** @preserve
 // ==UserScript==
 // @name Review Queue Notification
 // @author Malachi Edited Simon Forsberg Created
-// @description Shows a desktop notification when there are review items in the queue.
+// @description Shows a desktop notification when there review items in the queue.
 // @namespace https://github.com/Zomis/SE-Scripts
 // @grant GM_getValue
 // @grant GM_setValue
@@ -14,16 +15,19 @@
 // @match *://*.stackapps.com/review*
 // @match *://*.mathoverflow.net/review*
 // ==/UserScript==
+*/
 
     var KEY_NEXT = 'NextReload';
-    var DELAY = 60 * 1000;
+    var DELAY = 60 * 1000; //60,000 milliseconds
     var currentTime = Date.now ? Date.now() : new Date().getTime();
     var lastTime = GM_getValue(KEY_NEXT, 0);
     var nextTime = currentTime + DELAY;
     GM_setValue(KEY_NEXT, nextTime);
 
     var timeDiff = Math.abs(lastTime - currentTime);
-    setTimeout(function(){ window.location.reload(); }, DELAY);
+    setTimeout(function(){
+        window.location.reload(); 
+    }, DELAY);
 
     var title = document.title.split(' - '); // keep the site name
     document.title = 'Desktop Notifications - ' + title[1];
@@ -36,7 +40,7 @@
         var reviewItems = document.getElementsByClassName('dashboard-num');
                 
         for (var i = 0; i < reviewItems.length; i++){
-            reviewCount += parseInt((reviewItems[i].getAttribute("title")).replace(',',''));
+            reviewCount += parseInt((reviewItems[i].getAttribute("title")).replace(',',''), 10);
             console.log(reviewItems[i]);
         }
         console.log(reviewCount);
@@ -44,7 +48,7 @@
             notifications.push(reviewCount + ' Review Items');
         }
 
-        if (notifications.length > 0) {
+        if (notifications.length) {
             var details = {
                 title: document.title,
                 text: notifications.join('\n'),
