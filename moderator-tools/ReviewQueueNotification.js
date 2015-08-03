@@ -7,13 +7,13 @@
 // @grant GM_getValue
 // @grant GM_setValue
 // @grant GM_notification
-// @match *://*.stackexchange.com/review*
-// @match *://*.stackoverflow.com/review*
-// @match *://*.superuser.com/review*
-// @match *://*.serverfault.com/review*
-// @match *://*.askubuntu.com/review*
-// @match *://*.stackapps.com/review*
-// @match *://*.mathoverflow.net/review*
+// @match *://*.stackexchange.com/review
+// @match *://*.stackoverflow.com/review
+// @match *://*.superuser.com/review
+// @match *://*.serverfault.com/review
+// @match *://*.askubuntu.com/review
+// @match *://*.stackapps.com/review
+// @match *://*.mathoverflow.net/review
 // ==/UserScript==
 */
 
