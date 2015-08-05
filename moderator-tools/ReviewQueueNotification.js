@@ -2,8 +2,8 @@
 // ==UserScript==
 // @name Review Queue Notification
 // @author Malachi with help from Simon Forsberg
-// @description Shows a desktop notification when there review items in the queue.
-// @namespace https://github.com/Zomis/SE-Scripts
+// @description Shows a desktop notification when there review items in the queue. If you would like to donate, please send to PayPal via lyle.hart@hartwebpages.com
+// @namespace https://github.com/malachi26/SE-Scripts
 // @grant GM_getValue
 // @grant GM_setValue
 // @grant GM_notification
