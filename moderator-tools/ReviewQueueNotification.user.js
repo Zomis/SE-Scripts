@@ -51,4 +51,3 @@
             GM_notification(details, null);
         }
     }
-
