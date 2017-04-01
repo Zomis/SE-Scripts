@@ -1,3 +1,4 @@
+/** @preserve
 // ==UserScript==
 // @name Moderator Flag Notification
 // @author Simon Forsberg
@@ -14,6 +15,7 @@
 // @match *://*.stackapps.com/review*
 // @match *://*.mathoverflow.net/review*
 // ==/UserScript==
+*/
 
 if (window.location.href.indexOf('/desktop-notifications') === -1) {
     $('.tools-rev h1').append('<span class="lsep">|</span><a href="/review/desktop-notifications">Desktop Notifications</a></h1>');
