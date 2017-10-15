@@ -41,7 +41,7 @@ if (window.location.href.indexOf('/desktop-notifications') === -1) {
     if (timeDiff <= DELAY * 2) {
         var notifications = [];
 
-        var topbarFlag = $('.topbar-links .mod-only .icon-flag .flag-count').html();
+        var topbarFlag = $('.top-bar .indicator-badge').html();
         var topbarFlagCount = parseInt(topbarFlag);
         if (topbarFlagCount > 0) {
             notifications.push(topbarFlagCount + ' Flags');
